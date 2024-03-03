@@ -1,0 +1,434 @@
+{
+	"info": {
+		"_postman_id": "b821d1c5-2214-41d1-9a5d-63b8ec3853d9",
+		"name": "GestionEmpresas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32949353"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "http://localhost:2880/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "James",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Sipac",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jsipac@coperex.org.gt",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "jsipac",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "1ra calle Guatemala",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:2880/register"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2880/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "jsipac",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jsipac@coperex.org.gt",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "http://localhost:2880/login"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2880/updateMyAcount/65e3104925c3c78a4724f06e",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUzMTA0OTI1YzNjNzhhNDcyNGYwNmUiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDkzODAxMDUsImV4cCI6MTcwOTM4NzMwNX0.PEG98tEzyI_Tf1mzj7K8xnebjVir84-2ofyPS0gsiNM"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "surname",
+									"value": "Ajú",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:2880/updateMyAcount/65e3104925c3c78a4724f06e"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "http://localhost:2880/addNewCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUzMTA0OTI1YzNjNzhhNDcyNGYwNmUiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDkzODgzMDAsImV4cCI6MTcwOTM5NTUwMH0.qmPa3QcEI8uFF2M7sWJQFeBcI2strursTiav0QwHRK0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Deportiva",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Fútbol",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:2880/addNewCategory"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2880/selectCategories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUzMTA0OTI1YzNjNzhhNDcyNGYwNmUiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDkzODgzMDAsImV4cCI6MTcwOTM5NTUwMH0.qmPa3QcEI8uFF2M7sWJQFeBcI2strursTiav0QwHRK0"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:2880/selectCategories"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2880/updateCategory/65e332490449f7ddf2642220",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUzMTA0OTI1YzNjNzhhNDcyNGYwNmUiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDkzODgzMDAsImV4cCI6MTcwOTM5NTUwMH0.qmPa3QcEI8uFF2M7sWJQFeBcI2strursTiav0QwHRK0"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Académico",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:2880/updateCategory/65e332490449f7ddf2642220"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2880/deleteCategory/65e332490449f7ddf2642220",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUzMTA0OTI1YzNjNzhhNDcyNGYwNmUiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDkzODgzMDAsImV4cCI6MTcwOTM5NTUwMH0.qmPa3QcEI8uFF2M7sWJQFeBcI2strursTiav0QwHRK0"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:2880/deleteCategory/65e332490449f7ddf2642220"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "http://localhost:2880/addCompanie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUzMTA0OTI1YzNjNzhhNDcyNGYwNmUiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDkzODgzMDAsImV4cCI6MTcwOTM5NTUwMH0.qmPa3QcEI8uFF2M7sWJQFeBcI2strursTiav0QwHRK0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "SportGt",
+									"type": "text"
+								},
+								{
+									"key": "impacto",
+									"value": "alto",
+									"type": "text"
+								},
+								{
+									"key": "añosTrayectoria",
+									"value": "25",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "65e336180449f7ddf2642229",
+									"type": "text"
+								},
+								{
+									"key": "web",
+									"value": "sportgt.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:2880/addCompany"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2880/updateCompanie/65e3364b0449f7ddf264222d",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWRiYmI0MGIzYjNmYWQwNWZkMmM3NGUiLCJpYXQiOjE3MDkzOTg0OTUsImV4cCI6MTcwOTQwNTY5NX0.aR354dGC3MFevxpvW2mqEImaetG_KY2aSpj2rOMrMHo"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "añosTrayectoria",
+									"value": "25",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2880/updateCompany/65e3364b0449f7ddf264222d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2880",
+							"path": [
+								"updateCompany",
+								"65e3364b0449f7ddf264222d"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2880/crearReporte",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUzMTA0OTI1YzNjNzhhNDcyNGYwNmUiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDk0MDU3ODksImV4cCI6MTcwOTQxMjk4OX0.NlhSyO63A2c-Kj-9sSnDLbbkbsO7P7DAPJO9jXPBxVM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:2880/crearReporte"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2880/trayectoriaMayor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUzMTA0OTI1YzNjNzhhNDcyNGYwNmUiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDk0MjM3NDksImV4cCI6MTcwOTQzMDk0OX0.MJVAFOunx13yYKmO1MJXp40yWMw_laPOtJmkbtF-sic"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:2880/trayectoriaMayor"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2880/trayectoriaMenor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUzZDcwNTFkMTVlMGMyNGUwZTVkZWEiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDk0MzA3OTEsImV4cCI6MTcwOTQzNzk5MX0.w9LhLbBC99q2LnI8XINh7rdflCjUe88nttZaA8zO0FE"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "http://localhost:2880/trayectoriaMenor"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2880/searchByCategory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUzMTA0OTI1YzNjNzhhNDcyNGYwNmUiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDk0MjM3NDksImV4cCI6MTcwOTQzMDk0OX0.MJVAFOunx13yYKmO1MJXp40yWMw_laPOtJmkbtF-sic"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "category",
+									"value": "Académica",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:2880/searchByCategory"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2880/searchCompanyFromA-Z",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUzMTA0OTI1YzNjNzhhNDcyNGYwNmUiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDk0MjM3NDksImV4cCI6MTcwOTQzMDk0OX0.MJVAFOunx13yYKmO1MJXp40yWMw_laPOtJmkbtF-sic"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:2880/searchCompanyFromA-Z"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2880/selectCompanies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUzMTA0OTI1YzNjNzhhNDcyNGYwNmUiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDk0MjM3NDksImV4cCI6MTcwOTQzMDk0OX0.MJVAFOunx13yYKmO1MJXp40yWMw_laPOtJmkbtF-sic"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:2880/selectCompanies"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2880/searchCompanyFromZ-A",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUzZDcwNTFkMTVlMGMyNGUwZTVkZWEiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDk0MzA3OTEsImV4cCI6MTcwOTQzNzk5MX0.w9LhLbBC99q2LnI8XINh7rdflCjUe88nttZaA8zO0FE"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:2880/searchCompanyFromZ-A"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
